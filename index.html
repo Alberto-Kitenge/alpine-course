@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alpine | Cours Intensif</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/index.js" type="module" defer></script>
+  </head>
+  <body>
+    <h1>Alpine | Cours Intensif</h1>
+
+    <div x-data="counter">
+      <h2>Salut, <span x-text="name"></span></h2>
+      <p>La valeur actuelle du compteur est : <span x-text="count"></span></p>
+
+      <button x-on:click="count++">Augmenter de 1</button>
+      <button x-on:click="count--">Diminuer de 1</button>
+      <button x-on:click="count = 0">Remettre à zéro</button>
+      <button x-on:click="logCount()">Loguer le compteur</button>
+    </div>
+  </body>
+</html>
