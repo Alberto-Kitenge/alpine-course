@@ -5,7 +5,7 @@ Alpine.data("counter", () => ({
   name: "John Doe",
 
   logCount() {
-    console.log(this.count);
+    console.log("Le compteur vaut : " + this.count);
   },
 }));
 
