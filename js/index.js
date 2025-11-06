@@ -1,12 +1,12 @@
 import Alpine from "alpinejs";
 
-Alpine.data("counter", () => ({
-  count: 0,
-  name: "John Doe",
-
-  logCount() {
-    console.log("Le compteur vaut : " + this.count);
-  },
+Alpine.data("signupForm", () => ({
+  username: "",
+  password: "",
+  passwordConfirm: "",
+  belt: "",
+  bio: "",
+  newsletter: true,
 }));
 
 window.Alpine = Alpine;

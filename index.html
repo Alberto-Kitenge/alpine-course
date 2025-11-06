@@ -9,16 +9,71 @@
     <script src="js/index.js" type="module" defer></script>
   </head>
   <body>
-    <h1>Alpine | Cours Intensif</h1>
+    <h1>Alpine | Formulaire d'Inscription</h1>
 
-    <div x-data="counter">
-      <h2>Salut, <span x-text="name"></span></h2>
-      <p>La valeur actuelle du compteur est : <span x-text="count"></span></p>
+    <form x-data="signupForm">
+      <!-- Username -->
+      <div class="form-field">
+        <label>
+          <span>Nom d'utilisateur</span>
+          <input type="text" maxlength="15" x-model="username" />
+        </label>
+        <div x-text="username"></div>
+      </div>
 
-      <button x-on:click="count++">Augmenter de 1</button>
-      <button x-on:click="count--">Diminuer de 1</button>
-      <button x-on:click="count = 0">Remettre à zéro</button>
-      <button x-on:click="logCount()">Loguer le compteur</button>
-    </div>
+      <!-- Password -->
+      <div class="form-field password">
+        <label>
+          <span>Mot de passe</span>
+          <input type="password" x-model="password" />
+        </label>
+        <div x-text="password"></div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-field password">
+        <label>
+          <span>Confirmer le mot de passe</span>
+          <input type="password" x-model="passwordConfirm" />
+        </label>
+        <div x-text="passwordConfirm"></div>
+      </div>
+
+      <!-- Belt color -->
+      <div class="form-field">
+        <label>
+          <span>Couleur de ceinture</span>
+          <select x-model="belt">
+            <option value="">Sélectionner une couleur</option>
+            <option value="black">Noir</option>
+            <option value="white">Blanc</option>
+            <option value="red">Rouge</option>
+            <option value="orange">Orange</option>
+            <option value="brown">Marron</option>
+          </select>
+        </label>
+        <div x-text="belt"></div>
+      </div>
+
+      <!-- Short bio -->
+      <div class="form-field">
+        <label>
+          <span>Biographie courte</span>
+          <textarea maxlength="100" x-model="bio"> </textarea>
+        </label>
+        <div x-text="bio"></div>
+      </div>
+
+      <div class="form-field newsletter">
+        <label>
+          <input type="checkbox" x-model="newsletter" />
+          <span>Je souhaite recevoir les newsletters</span>
+        </label>
+        <div x-text="newsletter"></div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit">S'inscrire</button>
+    </form>
   </body>
 </html>
