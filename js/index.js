@@ -7,6 +7,16 @@ Alpine.data("signupForm", () => ({
   belt: "",
   bio: "",
   newsletter: true,
+
+  submitForm() {
+    console.log(
+      this.username,
+      this.password,
+      this.belt,
+      this.bio,
+      this.newsletter
+    );
+  },
 }));
 
 window.Alpine = Alpine;
