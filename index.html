@@ -62,11 +62,10 @@
           <span>Couleur de ceinture</span>
           <select x-model="belt">
             <option value="">Sélectionner une couleur</option>
-            <option value="black">Noir</option>
-            <option value="white">Blanc</option>
-            <option value="red">Rouge</option>
-            <option value="orange">Orange</option>
-            <option value="brown">Marron</option>
+
+            <template x-for="choice in beltChoices" :key="choice">
+              <option :value="choice" x-text="choice"></option>
+            </template>
           </select>
         </label>
 

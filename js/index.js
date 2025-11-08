@@ -9,6 +9,7 @@ Alpine.data("signupForm", () => ({
   newsletter: true,
   showPass: false,
   errors: {},
+  beltChoices: ["black", "white", "red", "orange", "brown"],
 
   validationFrom() {
     this.errors = {};
