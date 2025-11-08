@@ -22,6 +22,10 @@
           <span>Nom d'utilisateur</span>
           <input type="text" maxlength="15" x-model="username" />
         </label>
+
+        <template x-if="errors.username">
+          <p class="error" x-text="errors.username"></p>
+        </template>
       </div>
 
       <!-- Password -->
@@ -34,6 +38,10 @@
         <button type="button" @click="showPass = !showPass">
           <span x-text="showPass ? 'Hide' : 'show'"></span>
         </button>
+
+        <template x-if="errors.password">
+          <p class="error" x-text="errors.password"></p>
+        </template>
       </div>
 
       <!-- Confirm Password -->
@@ -42,6 +50,10 @@
           <span>Confirmer le mot de passe</span>
           <input type="password" x-model="passwordConfirm" />
         </label>
+
+        <template x-if="errors.passwordConfirm">
+          <p class="error" x-text="errors.passwordConfirm"></p>
+        </template>
       </div>
 
       <!-- Belt color -->
@@ -57,6 +69,10 @@
             <option value="brown">Marron</option>
           </select>
         </label>
+
+        <template x-if="errors.belt">
+          <p class="error" x-text="errors.belt"></p>
+        </template>
       </div>
 
       <!-- Short bio -->
@@ -69,6 +85,10 @@
           <span>Biographie courte</span>
           <textarea maxlength="100" x-model="bio"> </textarea>
         </label>
+
+        <template x-if="errors.bio">
+          <p class="error" x-text="errors.bio"></p>
+        </template>
       </div>
 
       <div class="form-field newsletter">
