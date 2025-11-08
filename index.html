@@ -99,6 +99,13 @@
 
       <!-- Submit button -->
       <button type="submit">S'inscrire</button>
+
+      <div class="overlay" x-show="success" x-cloak>
+        <div class="modal">
+          <h2>Merci à vous !</h2>
+          <button type="button" @click="success = false">Fermer</button>
+        </div>
+      </div>
     </form>
   </body>
 </html>

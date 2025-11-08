@@ -10,6 +10,7 @@ Alpine.data("signupForm", () => ({
   showPass: false,
   errors: {},
   beltChoices: ["black", "white", "red", "orange", "brown"],
+  success: false,
 
   validationFrom() {
     this.errors = {};
@@ -52,6 +53,8 @@ Alpine.data("signupForm", () => ({
       );
 
       $event.target.reset();
+
+      this.success = true;
     }
   },
 }));
