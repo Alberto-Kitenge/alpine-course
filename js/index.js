@@ -7,6 +7,7 @@ Alpine.data("signupForm", () => ({
   belt: "",
   bio: "",
   newsletter: true,
+  showPass: false,
 
   submitForm() {
     console.log(
